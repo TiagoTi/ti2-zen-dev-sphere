@@ -1,0 +1,3 @@
+# Map vi and vim to nvim
+alias vi="nvim"
+alias vim="nvim"
