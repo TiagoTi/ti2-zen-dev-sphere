@@ -18,3 +18,5 @@
 -- expr: A boolean. If enabled it gives the chance to use vimscript or lua to calculate the value of {rhs}. The default value is false.
 vim.g.mapleader = ','
 vim.keymap.set('n', '<leader>w', '<cmd>write<cr>')
+vim.keymap.set('n', '<F2>', '<cmd>Lexplore<cr>')
+vim.keymap.set('n', '<F3>', '<cmd>ReloadConfig<cr>')
