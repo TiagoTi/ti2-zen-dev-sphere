@@ -11,40 +11,46 @@ function create-config-link() {
   # Define o caminho do link simbólico
   linkTarget="$1/config"
 
-# Verifica se o diretório alvo existe
-if [[ -e $targetDir ]]; then
-    # Verifica se é um link simbólico
-    if [[ -L $targetDir ]]; then
-        # Remove o link simbólico existente
-        rm $targetDir
-    else
-        # Remove o diretório se não for um link
-        rm -rf $targetDir
+    # Verifica se o diretório alvo existe
+    if [[ -e $targetDir ]]; then
+        # Verifica se é um link simbólico
+        if [[ -L $targetDir ]]; then
+            # Remove o link simbólico existente
+            rm $targetDir
+        else
+            # Remove o diretório se não for um link
+            rm -rf $targetDir
+        fi
     fi
-fi
-# Cria um novo link simbólico
-ln -s $linkTarget $targetDir
+    # Cria um novo link simbólico
+    ln -s $linkTarget $targetDir
 }
 
 function create-shared-link() {
   echo "Iniciando link para: $1"
+
   # Define o caminho do diretório alvo
   targetDir="$HOME/.local/share/nvim"
+  echo "Define o caminho do diretório alvo: $targetDir"
 
   # Define o caminho do link simbólico
   linkTarget="$1/share"
 
-# Verifica se o diretório alvo existe
-if [[ -e $targetDir ]]; then
-    # Verifica se é um link simbólico
-    if [[ -L $targetDir ]]; then
-        # Remove o link simbólico existente
-        rm $targetDir
-    else
-        # Remove o diretório se não for um link
-        rm -rf $targetDir
+    # Verifica se o diretório alvo existe
+    if [[ -e $targetDir ]]; then
+        echo "Validando $targetDir"
+        # Verifica se é um link simbólico
+        if [[ -L $targetDir ]]; then
+            # Remove o link simbólico existente
+            echo "existe link $targetDir"
+            rm $targetDir
+        fi
+        if [[ -d $targetDir ]]; then
+            # Remove o diretório se não for um link
+            echo "existe dir $targetDir"
+            rm -rf $targetDir
+        fi
     fi
-fi
 # Cria um novo link simbólico
 ln -s $linkTarget $targetDir
 }
