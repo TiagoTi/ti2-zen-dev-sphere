@@ -23,8 +23,8 @@ Add plugin in `~/.zshrc` : `plugins=(git ... ti2-zen-dev-sphere)
 nvim-change
 
 #chose a number
-1) ~/.oh-my-zsh/custom/plugins/ti2-zen-dev-sphere/nvim-configs/Zenvelop                                       
-2) ~/.oh-my-zsh/custom/plugins/ti2-zen-dev-sphere/nvim-configs/basic-nvim                                     
+1) ~/.oh-my-zsh/custom/plugins/ti2-zen-dev-sphere/nvim-configs/Zenvelop
+2) ~/.oh-my-zsh/custom/plugins/ti2-zen-dev-sphere/nvim-configs/basic-nvim
 3) ~/.oh-my-zsh/custom/plugins/ti2-zen-dev-sphere/nvim-configs/obuun
 
 

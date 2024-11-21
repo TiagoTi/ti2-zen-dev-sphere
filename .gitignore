@@ -1,6 +1,11 @@
+!./**/.keep
 Makefile
 # nvim-configs/golang-nvim/
 # nvim-plugin.plugin.zsh
 # nvim-configs/Zenvelop/config/lazy-lock.json
 # nvim-configs/Zenvelop/share/*
 # !nvim-configs/Zenvelop/share/README.md
+nvim-configs/**/share/lazy/
+nvim-configs/**/share/plugged/
+nvim-configs/**/share/shada/
+.vscode/
