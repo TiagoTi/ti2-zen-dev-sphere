@@ -1,0 +1,5 @@
+{
+  "emmet-language-server": { "branch": "main", "commit": "facc5cfe8daf1f06a7d1034e5a96cf761cbbf76f" },
+  "lazy.nvim": { "branch": "main", "commit": "bef521ac89c8d423f9d092e37b58e8af0c099309" },
+  "nvim-emmet": { "branch": "main", "commit": "928cfb74ed436d6d326ccab2061cf3592de1bf55" }
+}
