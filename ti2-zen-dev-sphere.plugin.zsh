@@ -1,6 +1,9 @@
 #!/bin/zsh
 NVIM_BASE=~/.oh-my-zsh/custom/plugins/ti2-zen-dev-sphere
 
+local PLUGIN_NAME=ti2-zen-dev-sphere
+local PLUGIN_PATH="$ZSH_CUSTOM/plugins/$PLUGIN_NAME"
+
 
 function create-config-link() {
   echo "Iniciando link para: $1 em .config/nvim"
@@ -102,3 +105,25 @@ go-tool() {
     go install golang.org/x/tools/gopls@latest
     GOFLAGS=$tmp
 }
+
+
+function nvim-local() {
+  set +x
+  local directory="$(pwd)"
+
+  ls -la $HOME/.config/nvim | grep -o -e '-> /.*config$' | grep -o '/.*'     > $directory/.dev/nvim/old.txt
+  ls -la $HOME/.local/share/nvim | grep -o -e '-> /.*share$' | grep -o '/.*' >> $directory/.dev/nvim/old.txt
+  ln -sf $directory/.dev/nvim/config/nvim $HOME/.config/
+  ln -sf $directory/.dev/nvim/share/nvim "$HOME/.local/share/"
+  set -x
+}
+
+function oi () {
+  echo 'oi'
+}
+
+
+
+echo "PLUGIN_NAME $PLUGIN_NAME"
+echo "PLUGIN_PATH $PLUGIN_PATH"
+source "$PLUGIN_PATH/neovim-config-manager.zsh"
