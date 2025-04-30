@@ -6,6 +6,7 @@ vim.o.exrc = true
 vim.call('plug#begin')
 Plug('diepm/vim-rest-console')
 Plug('dense-analysis/ale')
+Plug('terroo/vim-simple-emoji')
 Plug('preservim/nerdtree')
 Plug('nvim-lua/plenary.nvim')
 Plug('junegunn/fzf', { ['dir'] = '~/.fzf', ['do'] = './install --all' })
