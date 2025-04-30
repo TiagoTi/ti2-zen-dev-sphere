@@ -23,18 +23,23 @@ set softtabstop=4           " see multiple spaces as tabstops so <BS> does the r
 set expandtab               " converts tabs to white space
 set shiftwidth=4            " width for autoindents
 set autoindent              " indent a new line the same amount as the line just typed
-set number                  " add line numbers
+set number!                  " add line numbers
 set wildmode=longest,list   " get bash-like tab completions
 set cc=180                  " set an 80 column border for good coding style
 filetype plugin indent on   "allow auto-indenting depending on file type
-syntax on                   " syntax highlighting
+set syntax=ON                   " syntax highlighting
 set mouse=a                 " enable mouse click
 set clipboard=unnamedplus   " using system clipboard
 filetype plugin on
 set cursorline              " highlight current cursorline
+set title
+set encoding=utf-8
 
 set termguicolors
 colorscheme pinkmare
+
+map q :q<CR>
+map <C-s> :w<CR>
 
 ]])
 
