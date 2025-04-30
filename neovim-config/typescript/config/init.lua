@@ -1,11 +1,10 @@
+-- Typescript Neovim Config
 local vim = vim
 local Plug = vim.fn['plug#']
 
 vim.o.exrc = true
 
 vim.call('plug#begin')
--- Dev Version
-Plug('/home/tiago/tmp/nvim-many-project/ti2.vim')
 Plug('diepm/vim-rest-console')
 Plug('dense-analysis/ale')
 Plug('preservim/nerdtree')
@@ -33,29 +32,22 @@ set clipboard=unnamedplus   " using system clipboard
 filetype plugin on
 set cursorline              " highlight current cursorline
 
-"Remaps
-	" ativar e desativar visualização do nerdtree
-		nmap <C-a> :NERDTreeToggle<CR>
-	" Shortcuts for split navigation
-	map <C-h> <C-w>h
-	map <C-j> <C-w>j
-	map <C-k> <C-w>k
-	map <C-l> <C-w>l
-	"enable ç to enter in command mode
-	:map ç :
-	" disable arrow keys (vim muscle memory)
-	noremap <up> :echoerr "Umm, use k instead"<CR>
-	noremap <down> :echoerr "Umm, use j instead"<CR>
-	noremap <left> :echoerr "Umm, use h instead"<CR>
-	noremap <right> :echoerr "Umm, use l instead"<CR>
-	inoremap <up> <NOP>
-	inoremap <down> <NOP>
-	inoremap <left> <NOP>
-	inoremap <right> <NOP>
-    "Show hidden files in NERDTRee
-	let NERDTreeShowHidden=1
-    " Set multi leader map
-" let mapleader="-"
+nmap <C-a> :NERDTreeToggle<CR>
+" Shortcuts for split navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+:map ç :
+noremap <up> :echoerr "Umm, use k instead"<CR>
+noremap <down> :echoerr "Umm, use j instead"<CR>
+noremap <left> :echoerr "Umm, use h instead"<CR>
+noremap <right> :echoerr "Umm, use l instead"<CR>
+inoremap <up> <NOP>
+inoremap <down> <NOP>
+inoremap <left> <NOP>
+inoremap <right> <NOP>
+let NERDTreeShowHidden=1
 let mapleader=","
 map <leader>r :w<CR>
 map <leader>w :w<CR>

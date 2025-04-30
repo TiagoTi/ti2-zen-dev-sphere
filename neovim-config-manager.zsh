@@ -47,11 +47,11 @@ function neovim_config_manager_use_version() {
     [[ -L "$NCM_CURRENT_CONFIG_LINK" ]] && rm "$NCM_CURRENT_CONFIG_LINK"
     [[ -L "$NCM_CURRENT_SHARE_LINK" ]] && rm "$NCM_CURRENT_SHARE_LINK"
 
-   echo "$NCM_BASE_DIR/$version/config/nvim  --->  $NCM_CURRENT_CONFIG_LINK" 
-   echo "$NCM_BASE_DIR/$version/share/nvim   --->  $NCM_CURRENT_SHARE_LINK" 
+   echo "ln -s $NCM_BASE_DIR/$version/config $NCM_CURRENT_CONFIG_LINK" 
+   echo "ln -s $NCM_BASE_DIR/$version/share  $NCM_CURRENT_SHARE_LINK" 
   
-    ln -s "$NCM_BASE_DIR/$version/config/nvim" "$NCM_CURRENT_CONFIG_LINK" 
-    ln -s "$NCM_BASE_DIR/$version/share/nvim" "$NCM_CURRENT_SHARE_LINK" 
+    ln -s "$NCM_BASE_DIR/$version/config" "$NCM_CURRENT_CONFIG_LINK" 
+    ln -s "$NCM_BASE_DIR/$version/share" "$NCM_CURRENT_SHARE_LINK" 
     return 0
 }
 

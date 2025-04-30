@@ -127,3 +127,5 @@ function oi () {
 echo "PLUGIN_NAME $PLUGIN_NAME"
 echo "PLUGIN_PATH $PLUGIN_PATH"
 source "$PLUGIN_PATH/neovim-config-manager.zsh"
+
+alias update='sudo apt update -y && sudo apt upgrade -y --allow-downgrades && sudo apt clean -y && sudo apt autoclean -y && sudo apt autoremove -y'
